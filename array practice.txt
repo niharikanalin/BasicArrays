@@ -1,0 +1,277 @@
+//find the index of 6 in the arr[]={2,,4,1,5,6,8,0}
+#include<iostream>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    int elem;
+    cin>>elem;
+    int flag=0;
+    int arr[n]={2,4,1,5,6,8,0};
+    for(int i=0;i<=n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(int i=0;i<=n;i++){
+    if(arr[i]==elem){
+        cout<<"index is "<<i;
+        flag=1;
+        break;
+    }   
+    }
+    if(flag==0){
+        cout<<"element not there";
+    }
+    return 0;
+    
+}
+
+or
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+ 
+  int a[8]={2,4,1,5,6,7,8,0};
+   for(int i=0;i<8;i++)
+   {
+       cin>>a[i];
+   }
+   for(int i=0;i<8;i++)
+   { 
+       if(a[i]==6)
+       {
+       cout<<"the elem 6 is at index :"<<i; 
+       }
+   }
+
+
+   return 0;
+}
+
+
+//sum of 10 elementsn in an array
+#include <iostream>
+using namespace std;
+int main(){
+    int arr[10],sum=0;
+    cout<<"Enter elements in Array";
+    
+    for(int i=0;i<10;i++)
+     {
+     cin>>arr[i];
+     }
+     for(int i=0;i<10;i++)
+      { 
+       sum=sum+arr[i];
+       cout<<arr[i];
+      }
+      cout<<"sum of the arr is "<<sum;
+        return 0;
+    } 
+
+//if an even element or not in arr[]={1,3,7,5}
+#include <iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int elem;
+    cin>>elem;
+    int flag=0;
+    int arr[n];
+    for(int i=0;i<n;i++)
+     {
+     cin>>a[i];
+     }
+     for(int i=0;i<n;i++)
+      { 
+       if(a[i]%2==0)
+       {
+        cout<<"yes";
+        flag=1;
+        break;
+       }
+      else{
+      cout<<"no";
+      }
+     return 0;
+    } 
+//find the index of 7 in an arr[]={2,3,4,5,7}
+#include <iostream>
+using namespace std;
+int main(){
+    int arr[5]={2,3,4,5,7};
+    int flag=0;
+    for(int i=0;i<5;i++)
+    {
+    cin>>arr[i];
+    }
+    for(int i=0;i<5;i++)
+    {
+        if(arr[i]==7)
+        {
+        cout<<"index of 7 is "<<i;
+        flag =1;
+        break;
+        }
+    }
+    if(flag==0)
+    {
+        cout<<"not there";
+    }
+        return 0;
+    } 
+
+
+//WAP to insert an element in the array at 2nd position
+
+a[]={3,2,1,8,11}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int a[20]= {3,2,1,8,11},pos,elem;
+   cout<<"Enter the elem and pos: ";
+   cin>>pos>>elem;
+   
+   for(int i=5;i>pos;i--)
+   a[i]=a[i-1];
+   a[pos]=elem;
+   
+   cout<<"New array ";
+   for(int i=0;i<6;i++)
+   cout<<a[i];
+   
+  return 0;
+}
+
+
+// WAP to insert in an array[] ,USER DEFINED;
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int a[20];
+   int choice,i;
+   do
+   {
+       cout<<"Enter the "<<i+1<<" element";
+       cin>>a[i];
+       i++;
+       cout<<"\nDo you want to enter again (press y)";
+       cin>>choice;
+   }
+   while (choice == 'y');
+   cout<<"\nElements are ";
+   for(int k=0;k<i;k++)
+   cout<<a[k];
+   return 0;
+}
+
+
+//WAP to delete a element from a specific position of the arr[]={5,2,8,16,3}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[5]={5,2,8,16,3},pos;
+    cout<<"Enter the position ";
+    cin>>pos;
+    for(int i=pos;i<5;i++)
+    a[i]=a[i+1];
+    
+    for(int i=0;i<4;i++)
+    cout<<a[i];
+   return 0;
+}
+
+
+// WAP to find MAX in the array: a[5]={14,81,100,4,3}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[5]={14,81,100,4,3},max,i;
+    max=a[0];
+     for(int i=0;i<5;i++)
+     {
+         if(max<a[i])
+         max=a[i];
+     }
+     cout<<"max is "<<max;
+    
+    
+   return 0;
+}
+
+
+// WAP to find MIN in the array: a[5]={14,81,100,4,3}
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[5]={14,81,100,4,3},min;
+    min=a[0];
+    
+    for(int i=0;i<5;i++)
+    {
+        if(min>a[i])
+        min=a[i];
+    }
+    
+    cout<<"min in the array is "<<min;
+   return 0;
+}
+
+// WAP to search an element in the array: a[5]={1,8,18,21,30} 
+//binary search
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[5]={1,8,18,21,30},first=0,last,mid,num;
+    num=21;
+    do 
+    {
+        mid=(first+last)/2;
+        if(a[mid]==num)
+        {
+            cout<<"found at location "<<mid;
+            break;
+        }
+        else if(a[mid]<num)
+        first = mid+1;
+        else
+        last=mid-1;
+    }
+    while(first<=last);
+    if (first>last)
+    cout<<"Element not found ";
+
+
+   return 0;
+}
+
+  
